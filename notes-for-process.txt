@@ -1,0 +1,36 @@
+DATA ENGİNEER kimi komandada nə edəcəyimi praktika edib burada not edirəm:
+
+1.
+python3 -m venv venv
+source venv/bin/activate
+
+Repository açdım və git clone etdim - daha sonra isə virtual envirpment yaratdım
+
+2. 
+echo "venv/" > .gitignore
+
+Mənim yazdığım kodları izlə, amma bu venv qovluğuna toxunma, o sadəcə mənim lokal kompüterim üçün lazımdır
+
+
+3.
+echo "__pycache__/" >> .gitignore
+
+Python arxa fonda mənim kodlarımı kompüter yaxşı başa düşsün deyə .pyc ya çevirir (Python Complier texmini bele bir şey idi). Yəni bu sadəcə pythonın sürətləndirmə mexanizmi kimi bir şeydir. Bunu githuba yükləməyə gərək yoxdur çünki başqa kompüterdə açılanda python bunu özü avtomatik yaradacaq. Ona görə də gitignore edirik. 
+
+Arada 1 fərq görürük ki venv gitignore olunanda 1 dənə ">" var idi lakin burda 2 dənədir. Bəs  bu niyədir? 
+Ona görə ki 1 dənə deyir ki  gitignore da nə varsa sil və mənim yazdığımı əlavə et. Sonrasında pycache gitignorea əlavə ediləndə deyirəm ki nə varsa toxunma və bir alt sətrə keçib əlavə et. Bununla da bizim venv-imiz və pycache-miz alt-alta yazılmış olur.
+
+4.
+pip install requests
+
+Requests kitabxanası ilə bircə sətirlə (requests.get(url)) internetdən istənilən məlumatı saniyələr içində çəkməyə imkan verir
+
+5.
+touch data_fetcher.py
+
+Kodumu yazacağım faylı yaradıram.
+
+6.
+code .
+
+İndi bunu VS Code da açıram.
